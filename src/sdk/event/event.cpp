@@ -36,7 +36,11 @@ DLL_EXP text __stdcall ER_Create() {
 	CreateDirectoryA(d.c_str(), NULL);
 	string inf = "插件名称{" + i.name + "}\r\n插件版本{" + i.version + "}\r\n插件作者{" + i.author + "}\r\n插件说明{" + i.desc + "}\r\n插件skey{8956RTEWDFG3216598WERDF3}\r\n插件sdk{S3}";
 	Event::event(d);
-	return s2t(inf);
+	auto size = inf.size();
+	auto cstr = new char[size + 1];
+	std::memcpy(cstr, inf.c_str(), size + 1);
+	return cstr;
+	//return s2t(inf);
 }
 DLL_EXP int32 __stdcall ER_Event(text b, int32 type, int32 subtype, text f, text a, text p, text m, text n, text i, text message, int32 point) {
 	int32 ret = 0;

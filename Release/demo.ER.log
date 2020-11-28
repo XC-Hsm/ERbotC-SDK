@@ -1,0 +1,10 @@
+﻿  demo.cpp
+  api.cpp
+  event.cpp
+  type.cpp
+    正在创建库 D:\机器人\xlz\ERbotC++sdk\gitee\erc-sdk_gitee\Release\demo.ER.lib 和对象 D:\机器人\xlz\ERbotC++sdk\gitee\erc-sdk_gitee\Release\demo.ER.exp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 1269 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  demo.ER.vcxproj -> D:\机器人\xlz\ERbotC++sdk\gitee\erc-sdk_gitee\Release\demo.ER.dll

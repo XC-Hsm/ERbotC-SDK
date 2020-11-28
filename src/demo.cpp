@@ -35,7 +35,7 @@ ERbot{
 		});*/
 		//收到群消息
 		onGroupMessage([](GroupMessage e) {
-			api::sendMsg(e.target, code::at(e.qq) + "您发送了一条消息:" + e.msg);
+			api::sendMsg(e.target, code::at(e.qq) + t2s("您发送了一条消息:") + e.msg);
 			return QUEUE_IGNORE;
 		});
 		/*收到讨论组消息

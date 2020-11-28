@@ -154,15 +154,10 @@ text i2t(int32 num) {
 }
 
 
+
 text s2t(string str) {
-	auto size = str.size();
-	auto cstr = new char[size + 1];
-	std::memcpy(cstr, str.c_str(), size + 1);
-	return cstr;
-}
-/*text s2t(string str) {
 	return u2t(eec(s2u(str)));
-}*/
+}
 
 string t2s(text text) {
 	return u2s(edc(t2u(text)));
