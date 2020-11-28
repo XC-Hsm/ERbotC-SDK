@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ERbotSDK">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Plugin">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ERbotSDK\api">
+      <UniqueIdentifier>{5cc47d2e-1dfb-40a7-b6de-cb3845c88e77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ERbotSDK\event">
+      <UniqueIdentifier>{2a6dc780-3b97-43fe-8a0c-e5b5c2b6b028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ERbotSDK\util">
+      <UniqueIdentifier>{ae162b83-0ff1-4df1-ae4a-17ddbeba92db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ERbotSDK\def">
+      <UniqueIdentifier>{d275acbb-1282-4faf-90a4-f26dd22f6284}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\sdk\api\api.h">
+      <Filter>ERbotSDK\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\event\event.h">
+      <Filter>ERbotSDK\event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\sdk.h">
+      <Filter>ERbotSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\util\type.h">
+      <Filter>ERbotSDK\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\util\json.hpp">
+      <Filter>ERbotSDK\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\sdk\api\api.cpp">
+      <Filter>ERbotSDK\api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sdk\event\event.cpp">
+      <Filter>ERbotSDK\event</Filter>
+    </ClCompile>
+    <ClCompile Include="src\demo.cpp">
+      <Filter>Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sdk\util\type.cpp">
+      <Filter>ERbotSDK\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\sdk\event\event.inc">
+      <Filter>ERbotSDK\event</Filter>
+    </None>
+    <None Include="src\sdk\api\api.inc">
+      <Filter>ERbotSDK\api</Filter>
+    </None>
+    <None Include="config.def">
+      <Filter>ERbotSDK\def</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+FUNC(int32, PrivateMessage);
+FUNC(int32, GroupMessage);
+FUNC(int32, DiscussMessage);
+FUNC(int32, FriendAddRequest);
+FUNC(int32, FriendAddResponse);
+FUNC(int32, BeFriendDelete);
+FUNC(int32, GroupAddRequest);
+FUNC(int32, GroupMemberIncrease);
+FUNC(int32, GroupMemberDecrease);
+FUNC(int32, GroupDissmiss);
+FUNC(int32, GroupManagerChange);
+FUNC(int32, GroupMemberCardChange);
+FUNC(int32, GroupNameChange);
+FUNC(int32, GroupBanSpeak);
+FUNC(int32, GroupMemberBanSpeak);
+FUNC(int32, GroupAnonymousChange);
+FUNC(int32, GroupMemberRemoveMessage);

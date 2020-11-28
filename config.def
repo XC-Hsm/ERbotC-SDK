@@ -1,0 +1,6 @@
+;×÷Õß£ºÐÇ³¾
+EXPORTS
+ER_Create @ 1
+ER_Event @ 2
+ER_SetUp @ 3
+ER_DestroyPlugin @ 4
