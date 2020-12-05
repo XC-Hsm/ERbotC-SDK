@@ -40,7 +40,7 @@ namespace api {
 		raw::DisabledPlugin();
 	}
 	void log(string msg) {
-		raw::OutPut(s2t(msg));
+		raw::OutPut(msg.c_str());
 	}
 	void log(int64 msg) {
 		raw::OutPut(l2t(msg));
@@ -52,76 +52,76 @@ namespace api {
 		return t2s(raw::GetNick(l2t(bot), l2t(qq)));
 	}
 	void sendMsg(target tar, string msg) {
-		raw::SendMsg(l2t(tar.bot), tar.type, tar.group ? l2t(tar.group) : "", tar.qq ? l2t(tar.qq) : "", s2t(msg));
+		raw::SendMsg(l2t(tar.bot), tar.type, tar.group ? l2t(tar.group) : "", tar.qq ? l2t(tar.qq) : "", msg.c_str());
 	}
 	void sendXml(target tar, string msg) {
-		raw::SendXml(l2t(tar.bot), tar.type, tar.group ? l2t(tar.group) : "", tar.qq ? l2t(tar.qq) : "", s2t(msg), 0);
+		raw::SendXml(l2t(tar.bot), tar.type, tar.group ? l2t(tar.group) : "", tar.qq ? l2t(tar.qq) : "", msg.c_str(), 0);
 	}
 	void sendJson(target tar, string msg) {
-		raw::SendJson(l2t(tar.bot), tar.type, tar.group ? l2t(tar.group) : "", tar.qq ? l2t(tar.qq) : "", s2t(msg));
+		raw::SendJson(l2t(tar.bot), tar.type, tar.group ? l2t(tar.group) : "", tar.qq ? l2t(tar.qq) : "", msg.c_str());
 	}
 	void sendFriendMsg(int64 bot, int64 qq, string msg) {
-		raw::SendMsg(l2t(bot), 1, "", l2t(qq), s2t(msg));
+		raw::SendMsg(l2t(bot), 1, "", l2t(qq), msg.c_str());
 	}
 	void sendGroupMsg(int64 bot, int64 group, string msg) {
-		raw::SendMsg(l2t(bot), 2, l2t(group), "", s2t(msg));
+		raw::SendMsg(l2t(bot), 2, l2t(group), "", msg.c_str());
 	}
 	void sendDiscussMsg(int64 bot, int64 discuss, string msg) {
-		raw::SendMsg(l2t(bot), 3, l2t(discuss), "", s2t(msg));
+		raw::SendMsg(l2t(bot), 3, l2t(discuss), "", msg.c_str());
 	}
 	void sendGruopTempMsg(int64 bot, int64 group, int64 qq, string msg) {
-		raw::SendMsg(l2t(bot), 4, l2t(group), l2t(qq), s2t(msg));
+		raw::SendMsg(l2t(bot), 4, l2t(group), l2t(qq), msg.c_str());
 	}
 	void sendDiscussTempMsg(int64 bot, int64 discuss, int64 qq, string msg) {
-		raw::SendMsg(l2t(bot), 5, l2t(discuss), l2t(qq), s2t(msg));
+		raw::SendMsg(l2t(bot), 5, l2t(discuss), l2t(qq), msg.c_str());
 	}
 	void sendWebTempMsg(int64 bot, int64 qq, string msg) {
-		raw::SendMsg(l2t(bot), 6, "", l2t(qq), s2t(msg));
+		raw::SendMsg(l2t(bot), 6, "", l2t(qq), msg.c_str());
 	}
 	void sendFriendVerifyMsg(int64 bot, int64 qq, string msg) {
-		raw::SendMsg(l2t(bot), 7, "", l2t(qq), s2t(msg));
+		raw::SendMsg(l2t(bot), 7, "", l2t(qq), msg.c_str());
 	}
 	void sendFriendXml(int64 bot, int64 qq, string msg) {
-		raw::SendXml(l2t(bot), 1, "", l2t(qq), s2t(msg), 0);
+		raw::SendXml(l2t(bot), 1, "", l2t(qq), msg.c_str(), 0);
 	}
 	void sendGroupXml(int64 bot, int64 group, string msg) {
-		raw::SendXml(l2t(bot), 2, l2t(group), "", s2t(msg), 0);
+		raw::SendXml(l2t(bot), 2, l2t(group), "", msg.c_str(), 0);
 	}
 	void sendDiscussXml(int64 bot, int64 discuss, string msg) {
-		raw::SendXml(l2t(bot), 3, l2t(discuss), "", s2t(msg), 0);
+		raw::SendXml(l2t(bot), 3, l2t(discuss), "", msg.c_str(), 0);
 	}
 	void sendGruopTempXml(int64 bot, int64 group, int64 qq, string msg) {
-		raw::SendXml(l2t(bot), 4, l2t(group), l2t(qq), s2t(msg), 0);
+		raw::SendXml(l2t(bot), 4, l2t(group), l2t(qq), msg.c_str(), 0);
 	}
 	void sendDiscussTempXml(int64 bot, int64 discuss, int64 qq, string msg) {
-		raw::SendXml(l2t(bot), 5, l2t(discuss), l2t(qq), s2t(msg), 0);
+		raw::SendXml(l2t(bot), 5, l2t(discuss), l2t(qq), msg.c_str(), 0);
 	}
 	void sendWebTempXml(int64 bot, int64 qq, string msg) {
-		raw::SendXml(l2t(bot), 6, "", l2t(qq), s2t(msg), 0);
+		raw::SendXml(l2t(bot), 6, "", l2t(qq), msg.c_str(), 0);
 	}
 	void sendFriendVerifyXml(int64 bot, int64 qq, string msg) {
-		raw::SendXml(l2t(bot), 7, "", l2t(qq), s2t(msg), 0);
+		raw::SendXml(l2t(bot), 7, "", l2t(qq), msg.c_str(), 0);
 	}
 	void sendFriendJson(int64 bot, int64 qq, string msg) {
-		raw::SendJson(l2t(bot), 1, "", l2t(qq), s2t(msg));
+		raw::SendJson(l2t(bot), 1, "", l2t(qq), msg.c_str());
 	}
 	void sendGroupJson(int64 bot, int64 group, string msg) {
-		raw::SendJson(l2t(bot), 2, l2t(group), "", s2t(msg));
+		raw::SendJson(l2t(bot), 2, l2t(group), "", msg.c_str());
 	}
 	void sendDiscussJson(int64 bot, int64 discuss, string msg) {
-		raw::SendJson(l2t(bot), 3, l2t(discuss), "", s2t(msg));
+		raw::SendJson(l2t(bot), 3, l2t(discuss), "", msg.c_str());
 	}
 	void sendGruopTempJson(int64 bot, int64 group, int64 qq, string msg) {
-		raw::SendJson(l2t(bot), 4, l2t(group), l2t(qq), s2t(msg));
+		raw::SendJson(l2t(bot), 4, l2t(group), l2t(qq), msg.c_str());
 	}
 	void sendDiscussTempJson(int64 bot, int64 discuss, int64 qq, string msg) {
-		raw::SendJson(l2t(bot), 5, l2t(discuss), l2t(qq), s2t(msg));
+		raw::SendJson(l2t(bot), 5, l2t(discuss), l2t(qq), msg.c_str());
 	}
 	void sendWebTempJson(int64 bot, int64 qq, string msg) {
-		raw::SendJson(l2t(bot), 6, "", l2t(qq), s2t(msg));
+		raw::SendJson(l2t(bot), 6, "", l2t(qq), msg.c_str());
 	}
 	void sendFriendVerifyJson(int64 bot, int64 qq, string msg) {
-		raw::SendJson(l2t(bot), 7, "", l2t(qq), s2t(msg));
+		raw::SendJson(l2t(bot), 7, "", l2t(qq), msg.c_str());
 	}
 	vector<FriendListInfo> getFriendList(int64 bot) {
 		vector<FriendListInfo> l;
@@ -247,13 +247,13 @@ namespace api {
 		return b;
 	}
 	void setStatus(int64 bot, int32 state, string msg) {
-		raw::SetStatus(l2t(bot), state, s2t(msg));
+		raw::SetStatus(l2t(bot), state, msg.c_str());
 	}
 	string getGroupNotice(int64 bot, int64 group) {
 		return t2s(raw::GetNotice(l2t(bot), l2t(group)));
 	}
 	string getPicLink(int64 bot, int64 group, string msg) {
-		return t2s(group ? (raw::GetPicLink(l2t(bot), 1, l2t(group), s2t(msg))) : (raw::GetPicLink(l2t(bot), 2, "", s2t(msg))));
+		return t2s(group ? (raw::GetPicLink(l2t(bot), 1, l2t(group), msg.c_str())) : (raw::GetPicLink(l2t(bot), 2, "", msg.c_str())));
 	}
 	string uploadGroupVoice(int64 bot, int64 group, bin voice) {
 		return t2s(raw::UpLoadVoice(l2t(bot), l2t(group), voice));
@@ -265,7 +265,7 @@ namespace api {
 		return t2s(raw::UpLoadPic(l2t(bot), 1, l2t(qq), pic));
 	}
 	bool joinGroup(int64 bot, int64 group, string msg) {
-		return raw::JoinGroup(l2t(bot), l2t(group), s2t(msg));
+		return raw::JoinGroup(l2t(bot), l2t(group), msg.c_str());
 	}
 	void quitGroup(int64 bot, int64 group) {
 		raw::QuitGroup(l2t(bot), l2t(group));
@@ -274,7 +274,7 @@ namespace api {
 		return raw::SendVoice(l2t(bot), l2t(qq), voice);
 	}
 	bool addFriend(int64 bot, int64 qq, string msg) {
-		return raw::AddFriend(l2t(bot), l2t(qq), s2t(msg));
+		return raw::AddFriend(l2t(bot), l2t(qq), msg.c_str());
 	}
 	void setBlackList(int64 bot, int64 qq, bool black) {
 		if (black) {
@@ -425,13 +425,13 @@ namespace api {
 		return raw::GetExpertDays(l2t(bot), l2t(qq));
 	}
 	string getVoiceLink(int64 bot, string msg) {
-		return t2s(raw::GetGuidVoiceLink(l2t(bot), s2t(msg)));
+		return t2s(raw::GetGuidVoiceLink(l2t(bot), msg.c_str()));
 	}
 	void handleGroupEvent(int64 bot, int32 type, int64 qq, int64 group, int64 seq, int32 method, string msg) {
-		raw::HandleGroupEvent(l2t(bot), type, l2t(qq), l2t(group), l2t(seq), method, s2t(msg));
+		raw::HandleGroupEvent(l2t(bot), type, l2t(qq), l2t(group), l2t(seq), method, msg.c_str());
 	}
 	void handleFriendEvent(int64 bot, int64 qq, int32 method, string msg) {
-		raw::HandleFriendEvent(l2t(bot), l2t(qq), method, s2t(msg));
+		raw::HandleFriendEvent(l2t(bot), l2t(qq), method, msg.c_str());
 	}
 	string getDiscussName(int64 bot, int64 discuss) {
 		return t2s(raw::GetDisGroupName(l2t(bot), l2t(discuss)));

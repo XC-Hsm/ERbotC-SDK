@@ -50,7 +50,7 @@ DLL_EXP int32 __stdcall ER_Event(text b, int32 type, int32 subtype, text f, text
 	int64 objb = t2l(p);
 	int64 flag = t2l(n);
 	int32 id = t2i(i);
-	string msg = t2s(m);
+	string msg = s2t(t2s(m));
 	switch (type) {
 	case 1009:
 	case 1010:
